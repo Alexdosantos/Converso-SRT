@@ -67,34 +67,40 @@ export default function TextToSRTConverter() {
               className="w-full h-40 bg-gray-800 border-gray-700 focus:border-purple-400 focus:ring-purple-400"
             />
           </div>
-          <div className="flex items-center  space-x-4">
-            <div className="flex-1">
-              <label htmlFor="char-limit" className="block text-sm font-medium mb-2">Character Limit per Block</label>
+          <div className="">
+            <div >
+              <label htmlFor="char-limit" className="block text-sm font-medium mb-2">
+                Character Limit per Block
+              </label>
 
-              <Input
-                id="char-limit"
-                type="number"
-                value={charLimit}
-                onChange={(e) => setCharLimit(parseInt(e.target.value))}
-                className="w-full bg-gray-800 border-gray-700 focus:border-purple-400 focus:ring-purple-400"
-              />
             </div>
-            <div className="flex space-x-2 mt-7">
+            <div className='flex flex-col  space-y-4 '>
+              <div>
+                <Input
+                  id="char-limit"
+                  type="number"
+                  value={charLimit}
+                  onChange={(e) => setCharLimit(parseInt(e.target.value))}
+                  className="w-full bg-gray-800 border-gray-700 focus:border-purple-400 focus:ring-purple-400"
+                />
+              </div>
 
-              <Button
-                onClick={convertToSRT}
-                className="bg-purple-500 hover:bg-purple-600 text-white px-6 py-2 rounded-md transition duration-300 ease-in-out transform hover:scale-105"
-              >
-                Convert
-              </Button>
-              <Button
-                onClick={downloadSRT}
-                disabled={!srtOutput}
-                className="bg-gray-700 hover:bg-gray-600 text-white px-4 py-2 rounded-md transition duration-300 ease-in-out transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed"
-              >
-                <Download className="w-5 h-5 mr-2" />
-                Download SRT
-              </Button>
+              <div className="flex justify-end space-x-2 w-full">
+                <Button
+                  onClick={convertToSRT}
+                  className="flex-1 sm:flex-initial bg-purple-500 hover:bg-purple-600 text-white px-6 py-2 rounded-md transition duration-300 ease-in-out transform hover:scale-105"
+                >
+                  Convert
+                </Button>
+                <Button
+                  onClick={downloadSRT}
+                  disabled={!srtOutput}
+                  className="flex-1 sm:flex-initial bg-gray-700 hover:bg-gray-600 text-white px-4 py-2 rounded-md transition duration-300 ease-in-out transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed"
+                >
+                  <Download className="w-5 h-5 mr-2" />
+                  Download SRT
+                </Button>
+              </div>
             </div>
           </div>
           <div>
