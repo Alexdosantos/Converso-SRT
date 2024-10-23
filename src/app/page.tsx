@@ -107,7 +107,7 @@ export default function TextToSRTConverter() {
             />
           </div>
           <footer className="text-gray-400 text-sm mt-7 text-center">
-            <p>© 2024 <a href="https://www.stringweb.online/" target="_blank">Desenvovido por <strong>STRING WEB</strong> </a>All rights reserved.</p>
+            <p>© 2024 <a href="https://www.stringweb.online/" target="_blank">Desenvolvido por <strong>STRING WEB</strong> </a>All rights reserved.</p>
           </footer>
         </div>
       </div>
