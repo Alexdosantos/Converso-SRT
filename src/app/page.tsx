@@ -4,6 +4,8 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Download } from 'lucide-react'
+import Navigation from '@/components/Navigation/Navigation'
+import Footer from '@/components/Footer/Footer'
 
 export default function TextToSRTConverter() {
   const [inputText, setInputText] = useState('')
@@ -53,9 +55,12 @@ export default function TextToSRTConverter() {
   }
 
   return (
-    <div className="min-h-screen bg-gray-900 text-gray-100 p-8">
+    <div className="min-h-screen bg-gray-900 text-gray-100 p-8 relative">
+      <div className="absolute top-3 left-1/2 transform -translate-x-1/2 w-[95%]">
+        <Navigation />
+      </div>
       <div className="max-w-4xl mx-auto">
-        <h1 className="text-3xl font-bold mb-8 text-center text-purple-300">Text to SRT Converter</h1>
+        <h1 className="text-3xl font-bold mb-8 mt-[19%] text-center text-white">Text to SRT Converter</h1>
         <div className="space-y-6">
           <div>
             <label htmlFor="input-text" className="block text-sm font-medium mb-2">Input Text</label>
@@ -112,9 +117,7 @@ export default function TextToSRTConverter() {
               className="w-full h-60 bg-gray-800 border-gray-700"
             />
           </div>
-          <footer className="text-gray-400 text-sm mt-7 text-center">
-            <p>© 2024 <a href="https://www.stringweb.online/" target="_blank">Desenvolvido por <strong>STRING WEB</strong> </a>All rights reserved.</p>
-          </footer>
+          <Footer />
         </div>
       </div>
     </div>
